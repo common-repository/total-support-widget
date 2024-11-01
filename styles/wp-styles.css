@@ -1,0 +1,191 @@
+.widget_am_socials * {
+    margin: 0;
+    padding: 0;
+    line-height: normal;
+}
+
+.am-socials-top {
+    background-color: #ff2e1d;
+    color: #fff;
+    text-align: center;
+}
+.patreon-show {
+    display: block;
+}
+.patreon-show img {
+    width: 100%;
+    height: auto;
+    display: block;    
+}
+.am-socials-top p {
+    padding: 10px 5px;
+    font-size: 40px;
+    line-height: 50px;
+}
+.am-socials-top p strong {
+    font-family: arial;
+    display: block;
+    font-family: impact;
+}
+.am-socials-main {
+    background-color: #006900;
+}
+.socials {
+    padding: 20px;
+    text-align: center;
+}
+.socials span.wrap {
+    width: 20%;
+    display: inline-block;    
+}
+/*
+.socials .icon {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    background-repeat: no-repeat;
+    background-position: center;  
+    background-size: cover;
+    text-indent: -99999px;
+    padding: 10px;
+    margin: 5px;
+}
+.socials .icon:hover {
+    opacity: .8;
+}
+*/
+/*
+a.icon-facebook {
+    background-image: url(../images/facebook.svg);
+    background-color: #265dde;
+}
+a.icon-twitter {
+    background: url(../images/twitter.svg);
+    background-color: #50d7ff;
+}
+a.icon-blabim {
+    background-image: url(../images/blab.svg);
+    background-color: #4650ff;
+}
+a.icon-soundcloud {
+    background-image: url(../images/soundcloud.svg);
+    background-color: #fe341e;
+}
+a.icon-youtube {
+    background-image: url(../images/youtube.svg);
+    background-color: #ff1e3e;
+}
+a.icon-itunes {
+    background-image: url(../images/itunes.svg);
+    background-color: #fe3372;
+}
+a.icon-website {
+    background-image: url(../images/globe.svg);
+    background-color: #fd8c0e;
+}
+a.icon-pinterest {
+    background-image: url(../images/pinterest.svg);
+    background-color: #d0001c;
+}
+a.icon-googleplus {
+    background-image: url(../images/google-plus.svg);
+    background-color: #e5383e;
+}
+a.icon-googleplay {
+    background-image: url(../images/google-play.svg);
+    background-color: #3eabba;
+}
+*/
+.break {
+    display: block;
+}
+.bottom-text {
+    text-align: center;
+    color: #fd8c0e;
+    padding: 10px;
+    font-size: 17px;
+    margin-top: 20px;
+    word-break: break-all;
+}
+.am-socials-main .newsletter {
+    padding: 15px 25px;
+}
+.am-socials-main #mc_embed_signup {
+    background: transparent;
+    padding: 0;
+}
+.am-socials-main #mc_embed_signup h2 {
+    color: #fff;
+    font-size: 18px;
+    text-align: center;
+}
+.envelope-icon {
+    background-image: url(../images/mail.png);
+    background-position: center 0px;
+    background-repeat: no-repeat;    
+    height: 225px;
+    width: 100%;
+}
+.sendy-message {
+    border: 1px solid #fd8c0e;
+    color: #fd8c0e;
+    font-size: 17px;
+    margin: 15px 0;
+    padding: 4px;
+    text-align: center;
+}
+.join {
+    color:#fff;
+    text-transform: uppercase;
+    color: #fff;
+    text-align: center;
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+.join a {
+    color:#fff;
+}
+.newsletter-subscribe input[type="text"],
+.newsletter-subscribe input[type="email"] {
+    width: 100%;
+    padding: 12px 15px;
+    box-sizing: border-box;
+    border: 0;
+    margin-bottom: 13px;
+    font-size: 17px;
+    height: auto;
+    color: #000!important;
+}
+.newsletter-subscribe input[type="submit"] {
+    width: 100%;
+    padding: 12px 15px;
+    box-sizing: border-box;
+    border: 0;
+    text-align: center;
+    color: #fff;
+    background-color: #fd8c0e;
+    font-size: 20px!important;
+    font-weight: bold;
+}
+.newsletter-subscribe input[type="submit"]:not(.disabled):hover {
+    opacity: .7;
+}
+.newsletter-subscribe input[type="submit"].disabled {
+    opacity: .7;
+}
+.newsletter-subscribe .disabled {
+    cursor: progress;
+}
+p.plugin-copyright {
+    font-size: 12px;
+    color: #777;
+    text-align: center;    
+}
+p.plugin-copyright a {
+    color: #777;
+    text-decoration: none;
+    font-weight: bold;    
+}
+.social-icon {
+    display: inline-block;
+}

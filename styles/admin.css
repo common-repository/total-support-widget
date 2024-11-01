@@ -1,0 +1,169 @@
+.am-tabs {
+    margin: 10px 0;
+    padding: 0;
+}
+.am-tabs .ui-tabs-panel {
+    padding: 5px;
+}
+.am-tabs .ui-corner-all {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+.am-tabs .ui-widget-header {
+    border-width: 0 0 1px 0;
+}
+.am-tabs .ui-tabs-active a {
+    color: #fff;
+}
+.info-sendy, .info-mailchimp {
+    display: none;
+}
+.info-sendy.active-newsletter, .info-mailchimp.active-newsletter {
+    display: block;
+    border: dashed #ccc 1px;
+    margin-bottom: 10px;
+    padding: 0 7px 7px;
+    background: #d7ebf9;
+}
+.active-newsletter h4 {
+    margin: 0;
+    border-bottom: dashed #ccc 1px;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.am-tabs li {
+    border-bottom: 0 none !important;
+    float: left;
+    list-style: outside none none;
+    margin: 0 0.2em 1px 0;
+    padding: 0;
+    position: relative;
+    top: 1px;
+    white-space: nowrap;
+    border: 1px solid #2694e8;
+    color: #ffffff;
+    font-weight: bold;    
+}
+.am-tabs li a {
+    float: left;
+    padding: 4px!important;
+    text-decoration: none;    
+}
+.am-tabs > div {
+    clear: both;
+}
+.am-tabs .grp input[type="text"] {
+    width: 100%;
+}
+.am-tabs label {
+    font-weight: bold;
+    font-size: 12px;
+}
+.am-tabs #socials label {
+    display: inline-block;
+    width: 25%;
+}
+.am-tabs #socials .grp {
+    display: inline-block;
+    width: 70%;
+}
+.am-tabs #socials .grp input{
+    width: 100%!important;
+}
+.am-tabs #socials select, .am-tabs #socials input[type="text"] {
+    display: inline-block;
+    width: 70%;;
+}
+
+.am-tabs #general .input {
+    display: inline-block;
+    width: 100%;;    
+}
+.am-tabs .type-color-picker label {
+    display: inline-block;
+    width: 65%;    
+    font-weight: normal;
+    vertical-align: middle;
+    font-size: 12px;
+    text-align: right;
+}
+.am-tabs .type-color-picker .grp {
+    display: inline-block;
+    width: 30%;
+    vertical-align: middle;    
+}
+.am-tabs .type-color-picker {
+    padding: 2px 0;
+}
+.am-tabs .type-color-picker .wp-picker-holder {
+    position: absolute;
+    z-index: 7;
+}
+.am-tabs .type-color-picker .wp-color-result {
+    margin: 0 3px 0 0;
+}
+
+.am-tabs .type-color-picker .wp-picker-open + .wp-picker-input-wrap {
+    display: inline-block;
+    position: absolute;
+    vertical-align: top;
+    width: 145px;
+}
+.am-tabs .styles-options label {
+    display: inline-block;
+    width: 55%;    
+    font-weight: normal;
+    vertical-align: middle;
+    font-size: 10px;
+    text-align: right;    
+}
+.am-tabs .styles-options .grp {
+    display: inline-block;
+    width: 40%;
+    vertical-align: middle;    
+}
+.am-tabs .styles-options .grp .input {
+    width: 92px!important;
+}
+.am-tabs #newsletter .info-newsletter label {
+    display: inline-block;
+    width: 25%;;
+    vertical-align: top;
+    padding-top: 6px;
+}
+.am-tabs #newsletter .info-newsletter .grp {
+    width: 73%;
+    display: inline-block;
+    vertical-align: top;
+}
+.am-tabs #newsletter .info-newsletter select, .am-tabs #newsletter .info-newsletter input[type="text"], .am-tabs #newsletter .info-newsletter input[type="password"]{
+    width: 100%;
+}
+.field-success label {
+    width: 100%!important;
+}
+.field-success input {
+    width: 100%!important;
+}
+.ui-tabs-panel#socials p {
+    margin: 3px;
+}
+.important-note {
+    font-size: 11px;
+    color: #aaa;
+    margin: 1px;
+}
+.donate {
+    background: rgba(0, 0, 0, 0) url("../images/paypal-donate-button.png") repeat scroll 0 0 / cover ;
+    display: inline-block;
+    height: 23px;
+    text-indent: -99999px;
+    width: 57px;
+}
+#general, #socials, #newsletter {
+	padding: 3px!important;
+}
+.wp-color-result::after {
+    font-size: 8px;
+}

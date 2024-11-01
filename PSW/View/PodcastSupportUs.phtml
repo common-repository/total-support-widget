@@ -1,0 +1,98 @@
+            <div class="jquery-ui-tabs am-tabs">
+                <ul>
+                    <li data-tab="1"><a href="#general">General</a></li>
+                    <li data-tab="2"><a href="#socials">Socials</a></li>
+                    <li data-tab="3"><a href="#newsletter">Newsletter</a></li>
+                </ul>
+                <div id="general">
+                    <input class="widefat" id="<?php echo $this->_data['guid']['id']; ?>" name="<?php echo $this->_data['guid']['name']; ?>" type="hidden" value="<?php echo $this->_data['guid']['value']; ?>">                    
+                    <?php //$this->_getFormField('patreon-show-img', '300x300 Image URL', $instance['patreon-show-img']); ?>
+                    <div style="padding: 5px; margin-bottom: 5px; color: rgb(255, 255, 255); background-color: rgb(50, 55, 60);">
+                    <?php
+                    $this->_showStandardCheckboxField('Disable Top Image?', $this->_data['disable-top-image']);
+                    ?>
+                    </div>
+                    <?php
+                    $args_patreon_show_img = $this->_data['patreon-show-img'];                    
+                    $this->_showStandardTextField('300X300 Image Url',$args_patreon_show_img);
+                    ?>
+                    <?php $this->_showStandardTextField('Add Page URL', $this->_data['patreon-show-link']); ?>
+                    <hr />
+                    <?php
+                    $args_footer = $this->_data['bottomtext'];                    
+                    $args_footer['note1']      = 'E.g. We respect your privacy!';
+                    $this->_showStandardTextField('Enter Text for Widget Footer', $args_footer);
+                    ?>
+                    <hr />
+                    <div class="styles-options">
+                    <?php $this->_showColorPickerField('Font Awesome Color', $this->_data['color-font-awesome']); ?>                    
+                    <?php $this->_showStandardTextField('Font Awesome Size (px)', $this->_data['size-font-awesome']); ?>                    
+                    <?php $this->_showColorPickerField('Background', $this->_data['color-bg']); ?>
+                    <?php $this->_showColorPickerField('Background Border', $this->_data['color-bg-border']); ?>
+                    <?php $this->_showColorPickerField('Text Color', $this->_data['color-text']); ?>
+                    <?php $this->_showColorPickerField('Button Background', $this->_data['color-btn-bg']); ?>
+                    <?php $this->_showColorPickerField('Button Text', $this->_data['color-btn']); ?>
+                    <?php $this->_showColorPickerField('Text Boxes Background', $this->_data['color-textbox-bg']); ?>
+                    <?php $this->_showColorPickerField('Box Text', $this->_data['color-textbox']); ?>
+                    <?php $this->_showColorPickerField('Box Text Border', $this->_data['color-textbox-border']); ?>                    
+                    </div>
+                    <hr />
+                    <table class="support">
+                        <tr>
+                            <td><a class="donate" href="https://www.paypal.me/adammulholland/5" target="_blank">Donate</a></td>
+                            <td>
+                            <?php
+                            $args_enable_link = $this->_data['enable-support-link'];                    
+                            $this->_showStandardCheckboxField('Show AM Podcast Network support link?', $args_enable_link);
+                            ?>
+                            </td>
+                    </table>
+                </div>
+                <div id="socials">
+                    <?php 
+                    foreach ($this->_socials as $idx => $label) {
+                        $social_args = $this->_data[$idx];
+                        $this->_showStandardTextField($label, $social_args);
+                    }
+                    ?>
+                </div>   
+                
+                <div id="newsletter">
+                    <p>
+                        <label for="<?php echo $this->_data['newsletter']['id']; ?>"><?php _e( 'Type:' ); ?></label> 
+                        <select class="widefat am-newletter" id="<?php echo $this->_data['newsletter']['id']; ?>" name="<?php echo $this->_data['newsletter']['name']; ?>">
+                            <option value="none" <?php echo ($this->_data['newsletter']['value'] == 'none' || !$instance['newsletter']) ? 'selected="selected"' : ''?>>None</option>                            
+                            <option value="sendy" <?php echo ($this->_data['newsletter']['value'] == 'sendy') ? 'selected="selected"' : ''?>>Sendy</option>
+                            <option value="mailchimp" <?php echo ($this->_data['newsletter']['value'] == 'mailchimp') ? 'selected="selected"' : ''?>>MailChimp</option>
+                        </select>
+                    </p>   
+                    <div class="info-newsletter info-sendy <?php echo ($this->_data['newsletter']['value'] == 'sendy') ? 'active-newsletter': '' ?>">
+                        <h4>Sendy</h4>
+                        <?php 
+                        $args_sendy_url = $this->_data['sendy-url'];
+                        $args_sendy_url['note1']      = 'E.g. http://vmail.domain.com';
+                        $this->_showStandardTextField('API URL', $args_sendy_url);
+                        ?>
+                        <?php //$this->_showStandardPasswordField('API Key', $this->_data['sendy-key']); ?>
+                        <?php $this->_showStandardTextField('List ID', $this->_data['sendy-list']); ?>                        
+                    </div>
+                    <div class="info-newsletter info-mailchimp <?php echo ($this->_data['newsletter']['value'] == 'mailchimp') ? 'active-newsletter': '' ?>">
+                        <h4>Mail Chimp</h4>
+                        <?php $this->_showStandardPasswordField('API Key', $this->_data['mailchimp-key']); ?>
+                        <?php $this->_showStandardTextField('List ID', $this->_data['mailchimp-list']); ?>
+                    </div>
+                    
+                    <?php
+                    $args_success = $this->_data['success'];
+                    $args_success['default'] = 'You have successfully subscribed to our newletter.';
+                    $this->_showStandardTextField('Successful Subscription Message', $args_success);
+                    ?>
+                </div>              
+            </div>
+            <script type="text/javascript">
+var $jx = jQuery.noConflict();
+var $active_tab;
+$jx(document).ready(function(){
+    $jx('.jquery-ui-tabs').tabs({active: 0});
+});
+            </script>
